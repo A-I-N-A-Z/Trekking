@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 50px;
+}
+
+.h-link{
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+    font-size: 25px;
+    font-weight: 400;
+    animation: rideRight 0.5s ease forwards;
+    transition: 0.3s ease all;
+}
+
+.h-link:hover{
+    color: lightgrey;
+}
+
+.market{
+    width: 4vh;
+}
+
+.h-logo{
+    width: 8vh;
+    cursor: pointer;
+    animation: rideLeft 0.5s ease forwards;
+}
+
+@media screen and (max-width: 500px){
+    .h-link{
+        display: none;
+    }
+    header{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@keyframes rideRight {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes rideLeft {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
